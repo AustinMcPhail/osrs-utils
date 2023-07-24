@@ -1,25 +1,35 @@
 {
-  "name": "osrs-utils",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/node": "20.4.1",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.44.0",
-    "eslint-config-next": "13.4.9",
-    "next": "13.4.9",
-    "postcss": "8.4.25",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.2",
-    "typescript": "5.1.6"
-  }
+    "name": "osrs-utils",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "install_arm64": "build-opencv --version 4.5.4 --flag=\"-DCMAKE_SYSTEM_PROCESSOR=arm64 -DCMAKE_OSX_ARCHITECTURES=arm64\" build",
+        "install_4.5.5_cuda": "build-opencv --version 4.5.5 --flags=\"-DWITH_CUDA=ON -DWITH_CUDNN=ON -DOPENCV_DNN_CUDA=ON -DCUDA_FAST_MATH=ON\" build",
+        "do-install": "build-opencv build"
+    },
+    "dependencies": {
+        "@types/node": "20.4.1",
+        "@types/react": "18.2.14",
+        "@types/react-dom": "18.2.6",
+        "@u4/opencv4nodejs": "^6.5.2",
+        "autoprefixer": "10.4.14",
+        "canvas": "^2.11.2",
+        "eslint": "8.44.0",
+        "eslint-config-next": "13.4.9",
+        "next": "13.4.9",
+        "postcss": "8.4.25",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "sharp": "^0.32.4",
+        "tailwindcss": "3.3.2",
+        "typescript": "5.1.6"
+    },
+    "devDependencies": {
+        "eslint-config-prettier": "^8.8.0",
+        "prettier": "^3.0.0"
+    }
 }
